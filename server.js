@@ -8,9 +8,7 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 8080;
 
-app.get('/', function (req, res) {
-  res.send('sup brosef');
-})
+
 // Prepares the Express app for handling data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -21,8 +19,7 @@ app.use(express.static("./app/public"));
 // Navigates the server to routing files that provide mapping for responding to data requests and responses
 // ======================================================
 
-require("./app/routing/apiRoutes");
-require("./app/routing/htmlRoutes");
+require("./app/routing/htmlRoutes.js")(app);
 
 // ======================================================
 // Listener
