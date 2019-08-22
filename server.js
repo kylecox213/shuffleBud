@@ -3,23 +3,27 @@
 //=======================================================
 
 var express = require("express");
+var app = express();
+var bodyParser = require("body-parser");
 var path = require("path");
 
-var app = express();
 var PORT = process.env.PORT || 8080;
 
 
 // Prepares the Express app for handling data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static("./app/public"));
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json({ type: 'application/*+json' }))
+app.use(bodyParser.raw({ type: 'application/vnd.custom-type'}))
+app.use(bodyParser.text({ type: 'text/html'}))
 // ======================================================
 // Routing
 
 // Navigates the server to routing files that provide mapping for responding to data requests and responses
 // ======================================================
 
+require("./app/routing/apiRoutes.js")(app);
 require("./app/routing/htmlRoutes.js")(app);
+
 
 // ======================================================
 // Listener
