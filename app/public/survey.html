@@ -171,7 +171,9 @@
                 </div>
                 <div class="modal-body">
                     <h2 id="matchName"></h2>
-                    <img id="matchImage" src="" alt="img">
+                    <img id="matchImage"
+                        src="https://media.lolusercontent.com/api/embedly/1/image/resize?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1718704537%2Fhank-hill_400x400.jpeg&key=f0abbd34f14549f3a15cd94dd9970851&width=425"
+                        alt="img">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -181,15 +183,65 @@
     </div>
 
 
+
+    <script type="text/javascript">
+
+        $("#submit").on("click", function () {
+            function validate() {
+
+                var isValid = true;
+                $(".form-control").each(function () {
+
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+
+                $(".chosen-select").each(function () {
+
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+                return isValid;
+            }
+
+            if (validate()) {
+                let userData = {
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                    ]
+                };
+
+                var currentURL = window.location.origin;
+
+                $.post(currentURL + "/api/friends", userData, function (data) {
+
+                    $("#matchName").text(data.name);
+                    $("#matchImg").attr("src", data.photo);
+                    $("#resultsModal").modal("toggle");
+
+                });
+            }
+            else {
+                alert("All fields must be complete!");
+            }
+            return false;
+        });
+
+    </script>
+
 </body>
 
 </html>
-
-<script type="text/javascript">
-    $("#submit".on(click, function() {
-        function validate() {
-            var isValid = true;
-            $".form-control"
-        }
-    }))
-</script>
