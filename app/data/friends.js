@@ -2,7 +2,7 @@ var friends = [
 
     {
         name:"Gunther Dunnit",
-        photo: "",
+        photo: "https://vignette.wikia.nocookie.net/botb/images/c/c2/Butface.jpg/revision/latest?cb=20180213214101",
         scores: [
             "5",
             "2",
@@ -18,7 +18,7 @@ var friends = [
     },
     {
         name:"Gordon Porchmortar",
-        photo: "",
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_K0XHfTnw81M2hPQj_KOJXgfxyXg6gvEQWgs-qejBa3mWcC1u",
         scores: [
             "3",
             "1",
@@ -34,7 +34,7 @@ var friends = [
     },
     {
         name:"Lester Flatts",
-        photo: "",
+        photo: "https://cdn.acidcow.com/pics/20091211/super_nerds_07.jpg",
         scores: [
             "1",
             "2",
@@ -50,7 +50,7 @@ var friends = [
     },
     {
         name:"Harrison Underfudge",
-        photo: "",
+        photo: "https://sincerelysavage.files.wordpress.com/2015/07/fullsizerender-43.jpg?w=300&h=257",
         scores: [
             "2",
             "2",
@@ -64,9 +64,9 @@ var friends = [
             "5"
         ]
     },
-    {
+    { 
         name:"Tyrod Gloryfork",
-        photo: "",
+        photo: "https://i.pinimg.com/originals/16/10/74/1610749e8ca54e97cedab43442b4c6d4.jpg",
         scores: [
             "4",
             "5",
@@ -82,7 +82,7 @@ var friends = [
     },
     {
         name:"Hershel Harshmanuer",
-        photo: "",
+        photo: "https://media1.tenor.com/images/f6e7145d2fa8ffc58025a981e9d44e6c/tenor.gif",
         scores: [
             "3",
             "5",
@@ -98,7 +98,7 @@ var friends = [
     },
     {
         name:"Jerry Sifterfiskee",
-        photo: "",
+        photo: "https://pbs.twimg.com/profile_images/2510175150/SFR2_400x400.jpg",
         scores: [
             "1",
             "2",
@@ -114,7 +114,7 @@ var friends = [
     },
     {
         name:"Allibaster Skudd",
-        photo: "",
+        photo: "https://s.hdnux.com/photos/75/26/75/16084826/5/920x920.jpg",
         scores: [
             "4",
             "4",
@@ -130,7 +130,7 @@ var friends = [
     },
     {
         name:"Debbie Shoespin",
-        photo: "",
+        photo: "https://pbs.twimg.com/profile_images/448548199/smoking_babe...jpg",
         scores: [
             "3",
             "2",
@@ -146,7 +146,7 @@ var friends = [
     },
     {
         name:"Gloria Farsmell",
-        photo: "",
+        photo: "https://i.pinimg.com/originals/e2/de/02/e2de02011f83ea8f3edf0fb3ee370cc9.jpg",
         scores: [
             "2",
             "1",
@@ -162,7 +162,7 @@ var friends = [
     },
     {
         name:"Cosby Doedlepoke",
-        photo: "",
+        photo: "https://pbs.twimg.com/media/BqT7lD1CEAE8I4s.jpg",
         scores: [
             "3",
             "3",
@@ -178,7 +178,7 @@ var friends = [
     },
     {
         name:"Bertha Barnburger",
-        photo: "",
+        photo: "https://media.tenor.com/images/ecd223073f4f1c7c91d2a5bc4886f3c2/tenor.gif",
         scores: [
             "4",
             "4",
@@ -194,7 +194,7 @@ var friends = [
     },
     {
         name:"Douglas Chunkstane",
-        photo: "",
+        photo: "http://tse4.mm.bing.net/th?id=OIP.w3avpClTck7gTrT_EVOJ2wHaFX&pid=15.1",
         scores: [
             "1",
             "5",
