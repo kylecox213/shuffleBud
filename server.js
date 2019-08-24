@@ -2,12 +2,12 @@
 
 //=======================================================
 
-var express = require("express");
-var app = express();
-var bodyParser = require("body-parser");
-var path = require("path");
+const express = require("express");
+const app = express();
+const bodyParser = require("body-parser");
+const path = require("path");
 
-var PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 
 // Prepares the Express app for handling data parsing
@@ -37,8 +37,8 @@ app.listen(PORT, function() {
 
 
 
-// var arr1 = [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]
-// var arr2 = [3, 2, 6, 4, 5, 1, 2, 5, 4, 1]
+// let arr1 = [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]
+// let arr2 = [3, 2, 6, 4, 5, 1, 2, 5, 4, 1]
 
 // let totalDiff = 0;
 
