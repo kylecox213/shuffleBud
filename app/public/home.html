@@ -4,17 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Shufflebud Home</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/5b6d4d0eea.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </head>
 
 <body>
+    <style>
+        body {
+            height: 100vh;
+            background: repeating-linear-gradient(to top, #86d0ac, #ecd982);
+        }
+        
+        .jumbotron {
+            margin-top: 50px;
+            background: repeating-linear-gradient(to top, #7897bd, #ecd982);
+        }
+    </style>
+
+
     <div class="container">
 
         <div class="jumbotron" style="margin-top: 50px;">
@@ -25,7 +36,7 @@
             <a href="/survey"><button class="btn btn-warning btn-lg"><i class="fas fa-skull-crossbones"></i>Take the
                     Survey</button></a>
         </div>
-        <footer class="footer">
+        <footer class="jumbo-footer">
             <div class="container">
                 <p><a href="api/friends">API Friends List</a> | <a href="https://github.com/kylecox213/FriendFinder">GitHub Repo</a></p>
             </div>
@@ -33,6 +44,12 @@
 
     </div>
 
+    <!-- <footer class="copyright">
+        <div class="up" id="up">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+        <p>&copy; 2019 Kyle Cox</p>
+    </footer> -->
 
 </body>
 

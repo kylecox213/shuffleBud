@@ -3,17 +3,39 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shufflebud Survey</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/5b6d4d0eea.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+
 </head>
 
 <body>
-
+    <style>
+        body {
+            background: linear-gradient(to top, #86d0ac, #ecd982);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .jumbotron {
+            margin-top: 50px;
+            background: repeating-linear-gradient(to top, #7897bd, #ecd982);
+        }
+        
+        #resultsModal {
+            background: repeating-linear-gradient(to top, #7897bd, #ecd982);
+        }
+        
+        .modal-dialog {
+            background: repeating-linear-gradient(to top, #7897bd, #ecd982);
+        }
+    </style>
     <div class="container">
         <h2 class="text-center">Survey Questions</h2>
         <hr>
@@ -155,8 +177,7 @@
 
         <footer class="footer">
             <div class="container">
-                <p><a href="/api/friends">API Friends List</a> | <a
-                        href="https://github.com/kylecox213/FriendFinder">GitHub Repo</a></p>
+                <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/kylecox213/FriendFinder">GitHub Repo</a></p>
             </div>
         </footer>
     </div>
@@ -169,7 +190,7 @@
                     <button type="button" class="close" data-dismiss="modal" &times;></button>
                     <h2 class="text-center"><strong>Recommended Companion</strong></h2>
                 </div>
-                <div class="modal-body" width= "800" height="800">
+                <div class="modal-body" width="800" height="800">
                     <h2 id="matchName"></h2>
                     <img id="matchImage" class="imageContainer" width="350" src="" alt="Placeholder">
                 </div>
@@ -183,19 +204,18 @@
 
 
     <script type="text/javascript">
-
-        $("#submit").on("click", function () {
+        $("#submit").on("click", function() {
             function validate() {
 
                 let isValid = true;
-                $(".form-control").each(function () {
+                $(".form-control").each(function() {
 
                     if ($(this).val() === "") {
                         isValid = false;
                     }
                 });
 
-                $(".chosen-select").each(function () {
+                $(".chosen-select").each(function() {
 
                     if ($(this).val() === "") {
                         isValid = false;
@@ -224,20 +244,18 @@
 
                 let currentURL = window.location.origin;
 
-                $.post(currentURL + "/api/friends", userData, function (data) {
+                $.post(currentURL + "/api/friends", userData, function(data) {
 
                     $("#matchName").text(data.name);
                     $("#matchImage").attr("src", data.photo);
                     $("#resultsModal").modal("toggle");
 
                 });
-            }
-            else {
+            } else {
                 alert("All fields must be complete!");
             }
             return false;
         });
-
     </script>
 
 </body>

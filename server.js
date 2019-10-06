@@ -7,16 +7,16 @@ const app = express();
 const bodyParser = require("body-parser");
 const path = require("path");
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 5000;
 
 
 // Prepares the Express app for handling data parsing
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json({ type: 'application/*+json' }))
-app.use(bodyParser.raw({ type: 'application/vnd.custom-type'}))
-app.use(bodyParser.text({ type: 'text/html'}))
-// ======================================================
-// Routing
+app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }))
+app.use(bodyParser.text({ type: 'text/html' }))
+    // ======================================================
+    // Routing
 
 // Navigates the server to routing files that provide mapping for responding to data requests and responses
 // ======================================================
@@ -32,7 +32,7 @@ require("./app/routing/htmlRoutes.js")(app);
 // ======================================================
 
 app.listen(PORT, function() {
-  console.log("App listening on PORT: " + PORT);
+    console.log("App listening on PORT: " + PORT);
 });
 
 
