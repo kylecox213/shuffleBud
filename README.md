@@ -3,7 +3,7 @@
 ## Friend Compatibility Questionaire App
 
 
-<img src="./public/img/shufflebud.png" alt="shuffleBud" title="shuffleBud screenshot" width=600 height="auto">
+<img src=".app/public/imgs/shufflebud.png" alt="shuffleBud" title="shuffleBud screenshot" width=600 height="auto">
 
 ## High Level Overview
 
