@@ -1,13 +1,13 @@
-# FriendFinder
+# shuffleBud
 
 ## Friend Compatibility Questionaire App
 
 
-<img src=".app/public/imgs/shufflebud.png" alt="shuffleBud" title="shuffleBud screenshot" width=600 height="auto">
-
 ## High Level Overview
 
 **ShuffleBud** is an Express server and Node.js web application. Users fill out a questionaire and scores are compared against those of other users that have submitted the questionaire. These other users are stored in the database and are paired with new user submissions based upon score similarity. 
+
+<img src="app/public/imgs/shufflebud.png" alt="shuffleBud" title="shuffleBud screenshot" width=600 height="auto">
 
 
 ## Give it a whirl
