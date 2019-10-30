@@ -18,7 +18,7 @@
             height: 100vh;
             background: repeating-linear-gradient(to top, #86d0ac, #ecd982);
         }
-        
+
         .jumbotron {
             margin-top: 50px;
             background: repeating-linear-gradient(to top, #7897bd, #ecd982);
@@ -26,30 +26,33 @@
     </style>
 
 
-    <div class="container">
+    <div class="home-container">
 
-        <div class="jumbotron" style="margin-top: 50px;">
-            <h1 class="text-center display-4"><i class="fas fa-toilet"></i>shuffleBUD</h1>
-            <p class="text-center lead">You give us answers. We give you friends.</p>
-            <hr class="my-4">
-            <p class="text-center">Friends are recommended based upon compatability!</p>
-            <a href="/survey"><button class="btn btn-warning btn-lg"><i class="fas fa-skull-crossbones"></i>Take the
-                    Survey</button></a>
-        </div>
-        <footer class="jumbo-footer">
-            <div class="container">
-                <p><a href="api/friends">API Friends List</a> | <a href="https://github.com/kylecox213/FriendFinder">GitHub Repo</a></p>
+        <div class="jumbotron" style="margin-top: 50px; padding-bottom: 5px;">
+            <div class="jumbotron-container text-center">
+                <h1 class="text-center display-4"><i class="fas fa-toilet"></i>shuffleBUD</h1>
+                <p class="text-center lead">You give us answers. We give you friends.</p>
+                <hr class="my-4">
+                <p class="text-center">Friends are recommended based upon compatability!</p>
+                <a href="/survey"><button class="btn btn-warning btn-lg text-center"><i
+                            class="fas fa-skull-crossbones" style="padding-right: 5px;"></i>Take the
+                        Survey<i class="fas fa-skull-crossbones" style="padding-left: 5px;"></i></button></a>
             </div>
-        </footer>
 
+            <footer class="jumbo-footer">
+                <div class="link-container text-center" style="margin-top: 50px;">
+                    <p><a href="api/friends">API Friends List</a> | <a
+                            href="https://github.com/kylecox213/FriendFinder">GitHub Repo</a></p>
+                </div>
+            </footer>
+        </div>
     </div>
 
-    <!-- <footer class="copyright">
-        <div class="up" id="up">
-            <i class="fas fa-chevron-up"></i>
-        </div>
-        <p>&copy; 2019 Kyle Cox</p>
-    </footer> -->
+    <div class="nav-container text-center">
+        <nav class="navbar fixed-bottom navbar-light bg text-center">
+            <a class="navbar-brand text-center" href="#">&copy; shuffleBud 2019</a>
+        </nav>
+    </div>
 
 </body>
 
