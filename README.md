@@ -10,8 +10,8 @@
 **ShuffleBud** is an Express server and Node.js web application. Users fill out a questionaire and scores are compared against those of other users that have submitted the questionaire. These other users are stored in the database and are paired with new user submissions based upon score similarity. 
 
 
-## Give it a shot
-[Link to Deployed Link] (https://shuffleBud.herokuapp.com/)
+## Give it a whirl
+[Link to Deployed Site] (https://shuffleBud.herokuapp.com/)
 
 ### Heroku Deployment 
 
