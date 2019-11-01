@@ -11,8 +11,6 @@
     <script src="https://kit.fontawesome.com/5b6d4d0eea.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-
 </head>
 
 <body>
@@ -22,16 +20,16 @@
             background-size: cover;
             background-repeat: no-repeat;
         }
-        
+
         .jumbotron {
             margin-top: 50px;
             background: repeating-linear-gradient(to top, #7897bd, #ecd982);
         }
-        
+
         #resultsModal {
             background: repeating-linear-gradient(to top, #7897bd, #ecd982);
         }
-        
+
         .modal-dialog {
             background: repeating-linear-gradient(to top, #7897bd, #ecd982);
         }
@@ -177,7 +175,8 @@
 
         <footer class="footer">
             <div class="container">
-                <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/kylecox213/FriendFinder">GitHub Repo</a></p>
+                <p><a href="/api/friends">API Friends List</a> | <a
+                        href="https://github.com/kylecox213/FriendFinder">GitHub Repo</a></p>
             </div>
         </footer>
     </div>
@@ -204,26 +203,25 @@
 
 
     <script type="text/javascript">
-        $("#submit").on("click", function() {
+        //function for validating the form
+        $("#submit").on("click", function () {
             function validate() {
-
+                //if either of the data fields are empty, return false
                 let isValid = true;
-                $(".form-control").each(function() {
-
+                $(".form-control").each(function () {
                     if ($(this).val() === "") {
                         isValid = false;
                     }
                 });
 
-                $(".chosen-select").each(function() {
-
+                $(".chosen-select").each(function () {
                     if ($(this).val() === "") {
                         isValid = false;
                     }
                 });
                 return isValid;
             }
-
+            // if form is valid, package data from the form into an object
             if (validate() === true) {
                 let userData = {
                     name: $("#name").val(),
@@ -241,17 +239,19 @@
                         $("#q10").val()
                     ]
                 };
+                //set url to the global object
 
                 let currentURL = window.location.origin;
-
-                $.post(currentURL + "/api/friends", userData, function(data) {
+                // send a POST request to the server
+                $.post(currentURL + "/api/friends", userData, function (data) {
 
                     $("#matchName").text(data.name);
                     $("#matchImage").attr("src", data.photo);
                     $("#resultsModal").modal("toggle");
-
+                    //format data to show the matched friend's information
                 });
             } else {
+                // alert modal that prompts the user to complete the form
                 alert("All fields must be complete!");
             }
             return false;
